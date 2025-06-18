@@ -3,48 +3,33 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-   return route("cursos.show",["id"=>4]);
+   return "Hola desde inicio";
 });
-Route::get("/contacto", function () {
-    return "Hola desde contacto utilizando GET";
+//ruta para listar registros
+Route::get("/posts",function(){
+    return "Hola desde la pagian de posts";
 });
-
-Route::get("/cursos/informacion", function () {
-    return "Bienvenido a la informacion de los cursos";
-})->name("cursos.informacion");
-
-Route::get("/cursos/{id}", function ($id) {
-    return "Bienvenido al curso con id: $id";
-})->name("cursos.show");
-
-
-Route::get("/cursos/{curso}", function ($curso) {
-    return "Bienvenido al curso: $curso";
-})->whereIn("curso",["php","laravel","vue"]);
-
-// Route::get("/cursos/{curso}/{category?}", function ($curso, $category = null) {
-//     if ($category)
-//         return "Bienvenido al curso: $curso con la categoria: $category";
-//     else
-//         return "Bienvenido al curso: $curso";
-// });
-
-// Route::get("/cursos/{curso}", function ($curso) {
-
-//         return "Bienvenido al curso: $curso";
-// });
-//validar ruta con regex
-// Route::get("/cursos/{curso}/{category}", function ($curso,$category) {
-
-//     return "Bienvenido al curso: $curso y categoria: $category";
-// })->where(["curso" => "[A-Za-z]{3,}",
-//             "category"=>"\w{3,}"]);
-
-// Route::get("/cursos/{curso}", function ($curso) {
-//     return "Bienvenido al curso: $curso";
-// })->whereAlpha("curso");
-
-
-// php artisan route:list
-// php artisan route:list --except-vendor
-// php artisan route:list --only-vendor
+//ruta mostrar formulario crear registro
+Route::get("/posts/create",function(){
+    return "Hola desde el formulario de crear post";
+});
+//ruta guardar registro
+Route::post("/posts",function(){
+    return "Guardar post desde el formulario";
+});
+// ruta mostrar registro
+Route::get("/posts/{post}",function($post){
+    return "se mostrar post $post";
+});
+//ruta mostrar formulario editar registro
+Route::get("/posts/{post}/edit",function($post){
+    return "se muestra el formulario con el post $post para editar";
+});
+//ruta actualziar registro
+Route::put("/posts/{post}",function($post){
+    return "se actualiza el post $post";
+});
+//ruta eliminar registro
+Route::delete("/posts/{post}",function($post){
+    return "se elimina el post $post";
+});

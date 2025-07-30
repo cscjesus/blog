@@ -7,6 +7,6 @@
     <title>Company</title>
 </head>
 <body>
-    <h1>Aqui se mostrara el detalle de un post</h1>
+    <h1>Aqui se mostrara el detalle de un post {{$post}}</h1>
 </body>
 </html>

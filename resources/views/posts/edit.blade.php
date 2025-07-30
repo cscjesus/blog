@@ -7,6 +7,6 @@
     <title>Company</title>
 </head>
 <body>
-    <h1>Aqui se mostrara el formulario de edicion de posts</h1>
+    <h1>Aqui se mostrara el formulario de edicion del post: {{$post}}</h1>
 </body>
 </html>

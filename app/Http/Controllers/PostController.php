@@ -12,8 +12,7 @@ class PostController extends Controller
     }
     public function create()
     {
-                return view('posts.create');
-
+        return view('posts.create');
     }
     public function store()
     {
@@ -21,18 +20,18 @@ class PostController extends Controller
     }
     public function show($post)
     {
-                return view('posts.show');
-
+        return view('posts.show',compact('post'));
     }
     public function edit($post)
     {
-                return view('posts.edit');
-
+        return view('posts.edit',compact('post'));
     }
-    public function update($post) {
+    public function update($post)
+    {
         return "se actualiza el post $post";
     }
-    public function destroy($post) {
-         return "se elimina el post $post";
+    public function destroy($post)
+    {
+        return "se elimina el post $post";
     }
 }

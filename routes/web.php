@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 
 Route::get('/', HomeController::class)->name("home.index");
-
+/*
 Route::prefix("/posts")->name("posts.")->controller(PostController::class)->group(function () {
     //ruta para listar registros
     Route::get("/", "index")->name("index");
@@ -36,3 +36,7 @@ Route::prefix("/posts")->name("posts.")->controller(PostController::class)->grou
 
 Route::resource('articles', PostController::class)->parameters(['articles' => 'post'])
     ->names('posts');
+*/
+
+Route::resource('posts', PostController::class);
+// seccion 6 video 1

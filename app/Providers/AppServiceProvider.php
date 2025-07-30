@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -25,5 +26,6 @@ class AppServiceProvider extends ServiceProvider
         //     'create' => 'crear',
         //     'edit' => 'editar',
         // ]);
+        View::share('prueba', 'Estos es un mensaje de prueba compartido a todas las vistas');
     }
 }

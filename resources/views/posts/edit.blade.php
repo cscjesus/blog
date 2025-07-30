@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>Aqui se mostrara el formulario de edicion del post: {{$post}}</h1>
+    <p>{{$prueba}}</p>
 </body>
 </html>

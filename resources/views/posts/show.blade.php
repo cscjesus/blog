@@ -8,5 +8,7 @@
 </head>
 <body>
     <h1>Aqui se mostrara el detalle de un post {{$post}}</h1>
+    <p>{{$prueba}}</p>
+
 </body>
 </html>

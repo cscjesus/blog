@@ -9,6 +9,7 @@
 <body>
     <h1>Aqui se mostrara el detalle de un post {{$post}}</h1>
     <p>{{$prueba}}</p>
+    <p>{{ $titulo }}</p>
 
 </body>
 </html>

@@ -39,5 +39,5 @@ Route::resource('articles', PostController::class)->parameters(['articles' => 'p
 */
 
 Route::resource('posts', PostController::class);
-// seccion 6 video 5
+// seccion 7 video 1
 //docker exec -it 527 bash

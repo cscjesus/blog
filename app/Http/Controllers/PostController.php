@@ -8,7 +8,9 @@ class PostController extends Controller
 {
     public function index()
     {
-        return view('posts.index');
+        $etiqueta = "Este es un parrafo de ejemplo";
+        $etiqueta2 = "<b> y este es otro parrafo de ejemplo</b>";
+        return view('posts.index',compact('etiqueta','etiqueta2'));
     }
     public function create()
     {

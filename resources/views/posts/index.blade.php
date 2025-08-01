@@ -13,6 +13,8 @@
     <p>
         {{-- interpolacion de variables en blade --}}
         {{ $etiqueta }} 
+        {{-- trabajar con js --}}
+        {{-- @{{ $etiqueta }}  --}}
         
         {{-- interpolacion de variables en blade --}}
         {!! $etiqueta2 !!}

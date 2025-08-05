@@ -10,16 +10,11 @@
 
 <body>
     <h1>Aqui se mostrara el listado de posts</h1>
-    <p>
-        {{-- interpolacion de variables en blade --}}
-        {{ $etiqueta }} 
-        {{-- trabajar con js --}}
-        {{-- @{{ $etiqueta }}  --}}
-        
-        {{-- interpolacion de variables en blade --}}
-        {!! $etiqueta2 !!}
-
-    </p>
+   <script>
+        const posts = @json($posts);
+        console.log(posts);
+    </script>
+    
 </body>
 
 </html>

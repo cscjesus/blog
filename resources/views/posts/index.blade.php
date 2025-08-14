@@ -10,19 +10,15 @@
 
 <body>
     <h1>Aqui se mostrara el listado de posts</h1>
-    @if (true)
-        <p>Condicion true</p>
-    @else
-        <p>Condicion false</p>
-    @endif
+   @env('local')
+<p>en local</p>
+   @endenv
+   
+   @production
+   <p>en production</p>
+       
+   @endproduction
 
-    @isset($prueba)
-        <p>Existe la variable {{$prueba}}</p>
-    @endisset
-
-    @empty($record)
-        <p>La variable no existe o no tiene un valor asignado</p>
-    @endempty
 </body>
 
 </html>

@@ -11,7 +11,7 @@
 <body>
     <ul>
 
-        @foreach ($posts as $post)
+        @forelse ($posts as $post)
         <li>
             <h2>
                 {{ $post['title'] }}
@@ -20,7 +20,11 @@
                 {{ $post['content'] }}
             </p>
         </li>
-        @endforeach
+        @empty
+        <li>
+            <h2>No posts available</h2>
+        </li>
+        @endforelse
         
     </ul>
 </body>

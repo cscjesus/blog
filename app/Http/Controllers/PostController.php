@@ -13,9 +13,8 @@ class PostController extends Controller
             ['id' => 2, 'title' => 'Post 2', 'content' => 'Content of Post 2'],
             ['id' => 3, 'title' => 'Post 3', 'content' => 'Content of Post 3'],
         ];
-        $dia = 10;
         
-        return view('posts.index',compact('posts','dia'));
+        return view('posts.index',compact('posts'));
     }
     public function create()
     {

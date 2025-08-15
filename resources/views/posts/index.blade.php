@@ -9,38 +9,20 @@
 </head>
 
 <body>
-    @switch($dia)
-        @case(1)
-            <p>Lunes</p>
-        @break
+    <ul>
 
-        @case(2)
-            <p>Martes</p>
-        @break
-
-        @case(3)
-            <p>Miercoles</p>
-        @break
-
-        @case(4)
-            <p>Jueves</p>
-        @break
-
-        @case(5)
-            <p>Viernes</p>
-        @break
-
-        @case(6)
-        <p>Sabado</p>
-        @break
-
-        @case(7)
-        <p>Domingo</p>
-        @break
-        @default
-        <p>El dia no existe</p>
-    @endswitch
-
+        @foreach ($posts as $post)
+        <li>
+            <h2>
+                {{ $post['title'] }}
+            </h2>
+            <p>
+                {{ $post['content'] }}
+            </p>
+        </li>
+        @endforeach
+        
+    </ul>
 </body>
 
 </html>
